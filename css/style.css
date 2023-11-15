@@ -30,6 +30,7 @@ header button{
     height: 30px;
     width: 120px;
     font-weight: 700;
+    cursor: pointer;
 }
 
 header img{
@@ -59,16 +60,22 @@ main .container h2{
 }
 main .cell{
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 main .cell.start{
     width: 100%;
     height: 100%;
-    justify-content: center;
-    align-items: center;
+    cursor: auto;
 }
 main .cell.s-10{
     width: calc(100% / 10);
     height: calc(100% / 10);
+}
+main .cell.selected{
+    background-color: aqua;
 }
 /* footer */
 footer{
