@@ -17,21 +17,26 @@
  }
 
 // Inizia il gioco
-function startGame(tag, difficulty, containerTag){
+function startGame(tag, difficultyTag, containerTag){
     const element = document.querySelector(tag);
     const container = document.querySelector(containerTag);
     element.addEventListener('click', function(){
     resetContentHtml(container);
+    const difficulty = document.getElementById(difficultyTag).value;
     let size;
-    if(difficulty === 1){
+    let classSize;
+    if(difficulty === '1'){
         size = 100;
-    }else if(difficulty === 2){
+        classSize = 's-10';
+    }else if(difficulty === '2'){
         size = 81;
+        classSize = 's-9';
     }else{
         size = 49;
+        classSize = 's-7';
     }
     for(let i = 1; i <= size; i++){
-        const cell = createElement('div', ['cell', 's-10'], i);
+        const cell = createElement('div', ['cell', classSize], i);
         container.append(cell);
     }
     });
@@ -48,8 +53,8 @@ function createEvent(containerTag){
 }
 
 /* Main */
-startGame('header button', 1, '.container');
-startGame('main h2', 1, '.container');
+startGame('header button', 'difficulty', '.container');
+startGame('main h2', 'difficulty', '.container');
 createEvent('.container');
 
 

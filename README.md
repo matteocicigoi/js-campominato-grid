@@ -17,11 +17,12 @@ Parametri: elemento html
 
 ## Funzione: startGame
 
-Parametri: tag html - difficolta (da 1 a 3) - tag del contenitore
+Parametri: tag html - id della select - tag del contenitore
 
 - crea gli elementi 
 - aggiunge l'evento al click
     - resetta il contenuto del contenitore con la funzione "resetContentHtml"
+    - verifica la difficoltà
     - modifica e dimensioni in base alla difficoltà
     - aggiunge le celle
 
